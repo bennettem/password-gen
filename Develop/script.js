@@ -87,7 +87,16 @@ var specialChar = [
   ":",
 ];
 //create prompts/confirms
-
+function createPassword() {
+  var characterLength = prompt(
+    "How long would you like your password? *Must be between 8 to 128 characters long"
+  );
+  // add stop if criteria doesn't match 8-128
+  if (characterLength < 8 || characterLength > 128) {
+    alert("Please provide a valid option!");
+  }
+}
+createPassword();
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
