@@ -106,9 +106,24 @@ function createPassword() {
     var confirmSpecial = confirm(
       "Would you like to include special characters?"
     );
+    // add condition if 'cancel' is clicked
+    if (
+      confirmLowercase === false &&
+      confirmUppercase === false &&
+      confirmNumeric === false &&
+      confirmSpecial === false
+    ) {
+      alert(
+        "Invalid entry please try again. Must choose at least one criteria"
+      );
+      createPassword();
+    }
   }
 }
 createPassword();
+
+// create new array based on user input
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
