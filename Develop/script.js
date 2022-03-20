@@ -94,6 +94,18 @@ function createPassword() {
   // add stop if criteria doesn't match 8-128
   if (characterLength < 8 || characterLength > 128) {
     alert("Please provide a valid option!");
+    createPassword();
+  } else {
+    var confirmLowercase = confirm(
+      "Would you like to include lowercase characters?"
+    );
+    var confirmUppercase = confirm(
+      "Would you like to include uppercase characters?"
+    );
+    var confirmNumeric = confirm("Would you like to include numbers?");
+    var confirmSpecial = confirm(
+      "Would you like to include special characters?"
+    );
   }
 }
 createPassword();
