@@ -88,6 +88,8 @@ var specialChar = [
 ];
 //create prompts/confirms
 function createPassword() {
+  var passwordArray = [];
+  var password = "";
   var characterLength = prompt(
     "How long would you like your password? *Must be between 8 to 128 characters long"
   );
@@ -119,10 +121,31 @@ function createPassword() {
       createPassword();
     }
   }
+  // create new array based on user input
+  if (confirmLowercase) {
+    passwordArray = passwordArray.concat(lowercase);
+  }
+  if (confirmUppercase) {
+    passwordArray = passwordArray.concat(uppercase);
+  }
+  if (confirmNumeric) {
+    passwordArray = passwordArray.concat(numeric);
+  }
+  if (confirmSpecial) {
+    passwordArray = passwordArray.concat(specialChar);
+  }
+  // for loop to generate randomized password
+  for (var i = 0; i < characterLength; i++) {
+    function newPassword() {
+      var randomIndex = Math.floor(Math.random() * passwordArray.length);
+      var newIndex = passwordArray[randomIndex];
+      return newIndex;
+    }
+    password += newPassword();
+  }
+  return password;
 }
 createPassword();
-
-// create new array based on user input
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
