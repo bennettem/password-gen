@@ -8,5 +8,5 @@ generate a password where the user can copy and use for their own use.
 
 ## Deployed site: 
 
-https://bennettem.github.io/password-gen
+
 
