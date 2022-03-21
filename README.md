@@ -8,6 +8,7 @@ generate a password where the user can copy and use.
 
 ## Deployed site: 
 
+https://bennettem.github.io/password-gen/
 
 ## Screenshot of site
 ![alt text](https://github.com/bennettem/password-gen/blob/main/password-gen.png)
