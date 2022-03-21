@@ -10,3 +10,4 @@ generate a password where the user can copy and use for their own use.
 
 
 
+![alt text](https://github.com/bennettem/password-gen/blob/main/password-gen.png)
